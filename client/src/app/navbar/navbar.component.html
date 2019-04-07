@@ -1,0 +1,27 @@
+
+    <div class="container">
+
+        <!-- cover-container d-flex w-100 h-100 p-3 mx-auto flex-column -->
+      
+        <nav class="navbar navbar-default">
+         
+              
+                  <a class="brand-logo">Yatra Review </a>
+              
+          <ul class="navbar-nav">
+            <li><a [routerLink]="['/home']">Home<span class="give-red"> | </span></a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/newhotel']">Add Hotel<span class="give-red"> | </span></a></li>
+              <li [routerLinkActive]="['active']"><a [routerLink]="['/register']">Register User<span class="give-red"> | </span></a></li>
+              <li [routerLinkActive]="['active']"><a [routerLink]="['/']">Logout </a></li>
+            </ul>
+         
+      </nav>
+      <hr>
+    </div>
+ 
+  
+
+
+
+
+

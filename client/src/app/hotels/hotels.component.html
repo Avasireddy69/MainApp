@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h2 class="page-header"> Add Hotel</h2>
+    <form>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" [(ngModel)]="name" name="name" class="form-control" >
+      </div>
+      <div class="form-group">
+          <label>Location</label>
+          <input type="text" [(ngModel)]="location" name="location" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label>Stars</label>
+            <input type="text" [(ngModel)]="stars" name="stars" class="form-control" >
+          </div>
+          <div class="form-group">
+              <label>Reviews</label>
+              <input type="text" [(ngModel)]="reviews" name="reviews" class="form-control" >
+            </div>
+    </form>
+  </div>
+  <hr>
+<div class="container">
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Stars</th>
+          <th>Reviews</th>
+          <th>EditHotel</th>
+          <th>DeleteHotel</th>
+        </tr>
+      </thead>
+      
+      <tbody >
+          
+        <tr *ngFor = "let hotel of hotels">
+           
+              <td>{{hotel.name}}</td>
+              <td>{{hotel.location}}</td>
+              <td>{{hotel.stars}}</td>
+              <td>{{hotel.reviews}}</td>
+              <td><input type="button" (click)="hotelEdit(hotel._id)" value="Edit" class="btn btn-danger"></td>
+              <td><input type="button" (click)="deleteHotel(hotel._id)" value="Delete" class="btn btn-danger"></td>
+            
+          
+        </tr>
+     
+      </tbody>
+   
+</table>
+</div>
